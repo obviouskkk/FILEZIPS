@@ -23,7 +23,7 @@ int main(int argc, const char* argv[])
 {
 	int n;
 	std::cin >> n;
-	printf("%d的阶乘是%lu",n,factorial(n));
+	printf("%d的阶乘是%llu", n, factorial(n));
     return 0;
 }
 
