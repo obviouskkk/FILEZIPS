@@ -15,11 +15,13 @@ inline int left(int num)
 {
     return (num << 1) + 1;
 }
+
 inline int right(int num) 
 {
     if (num == 0) return 2;
     return (num << 1) + 2;
 }
+
 void change(std::vector<int> & arr, int begin, int length)
 {
     while(left(begin) <= length) 
@@ -38,9 +40,6 @@ void change(std::vector<int> & arr, int begin, int length)
             }
             else 
                 break;
-            for (auto var : arr)
-                printf("%d ", var);
-            printf("\n");
         } else {
             if (arr[begin] < arr[left(begin)]) {
                 std::swap(arr[begin] , arr[left(begin)]);
