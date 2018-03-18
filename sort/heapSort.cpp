@@ -18,7 +18,6 @@ inline int left(int num)
 
 inline int right(int num) 
 {
-    if (num == 0) return 2;
     return (num << 1) + 2;
 }
 
@@ -69,7 +68,7 @@ void heap_sort(std::vector<int> & arr)
 
 int main()
 {
-    int vec[]={9, 5, 8, 4, 7 ,3, 2, 6};
+    int vec[]={12, 9, 5, 8, 4, 7 ,3, 2, 6, 2, 31, 23 };
     std::vector<int> arr(std::begin(vec), std::end(vec));
     heap_sort(arr);
     for (auto var : arr)

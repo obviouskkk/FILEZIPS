@@ -12,6 +12,15 @@
 #include <vector>
 #include <assert.h>
 
+/* 连续子数组，最大和
+ * 基本思想:负数越加越小，还不如单独数
+ * 保存一个max值，防止数组全是负的
+ * 保存一个返回值 sum；一个临时和 sum_temp
+ * 如果sum_temp < 0 ;回滚到0
+ * 如果sum_temp > sum,保存到sum
+ * 返回值:
+ * 判断 sum，小于0说明全是负的，返回最大值max;其他情况返回sum
+ */
 int MaxSumSubArr(const std::vector<int> & arr)
 {
     int sum = 0, max = arr[0];
