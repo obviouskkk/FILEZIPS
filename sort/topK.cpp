@@ -26,12 +26,10 @@ public:
             return retNull;
         }
         vector<int> ret(input.begin(), input.begin() + k);
-        // 建堆
-        for (int i = k/2-1; i >= 0 ; --i) {
+        for (int i = k/2-1; i >= 0 ; --i) { // 建堆
             change(ret, i, k - 1);
         }
-        // 插入
-        for (int i = k; i < (int)input.size(); ++i) {
+        for (int i = k; i < (int)input.size(); ++i) { // 插入
             if (input[i] < ret[0]) {
                 ret[0] = input[i];
                 change(ret, 0, k - 1);
